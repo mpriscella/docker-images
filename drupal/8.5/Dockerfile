@@ -65,6 +65,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 WORKDIR /var/www/html
 
 ENV DRUPAL_VERSION 8.5.1
+ENV PATH="/var/www/html/vendor/bin:${PATH}"
 
 RUN apt-get update -y \
   && apt-get -y install git \
